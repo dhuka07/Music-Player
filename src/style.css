@@ -1,0 +1,54 @@
+/* styles.css */
+.custom-max-height {
+    max-height: 82vh;
+  }
+  .btnsignup{
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: #1F1F1F;
+    font-weight: bold;
+    color: 1F1F1F;
+    
+  }
+.btnsignup:hover{
+    font-size:18;
+    padding: 8px;
+    color: #fff; 
+    transform: scale(1.04);
+  }
+ .btnlogin{
+    border-radius: 2.25rem;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #1F1F1F;
+    margin-left: 4px;
+    width: 79px;
+ } 
+ .btnlogin:hover{
+    font-size:18;
+    padding: 8px;
+    transform: scale(1.04);
+  }
+
+  /* flex border rounded items-center justify-center w-full */
+
+  .songLi{
+    display: flex;
+    border-radius: 6px;
+    border: 1px solid #ffffff;
+    align-items: center;
+    justify-items: center;
+    width: full;
+    list-style-type: decimal;
+    padding:16px;
+    margin-top: 8px;
+  }
+
+  /* .songLi:hover{
+    padding: 16px 0px;
+    transform:scale(1.01) ;
+  } */
