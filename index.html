@@ -9,8 +9,8 @@
   </head>
   <body class="bg-black text-white font-[Roboto] text-xl">
     <div class="flex m-auto">
-      <div class="left w-1/4 p-1 flex flex-col gap-1 rounded m-1">
-        <div class="home m-1 gap-1 rounded bg-[#121212]">
+      <div class="left w-1/4 p-1 flex flex-col gap-1 rounded m-1 ">
+        <div class="home m-1 gap-1 rounded bg-[#121212] sm:bg-red-500">
           <div class="logo flex p-1 cursor-pointer">
             <img
               class=" flex invert size-7 m-1"
@@ -18,9 +18,10 @@
               alt="logo"
             />
             <span class="flex m-1">Musify</span>
+            <img src="./public/images/close.svg" alt="" class="close invert">
           </div>
           <ul class="m-5 p-1">
-            <li class="list-none cursor-pointer flex font-bold text-base gap-4 ">
+            <li class="list-none cursor-pointer flex font-bold text-base gap-4 sm:bg-red-500">
               <img
                 class=" invert size-4"
                 src="./public/images/home.svg"
@@ -38,7 +39,7 @@
             </li>
           </ul>
         </div>
-        <div class="library relative min-h-lvh m-1 p-1 flex-col gap-5 rounded bg-[#121212]">
+        <div class="library relative m-1 p-1 flex-col gap-5 rounded bg-[#121212]">
           <div class="flex m-auto p-1">
             <img
               class="invert felx size-5 text-[#B3B3B3] cursor-pointer"
@@ -53,9 +54,9 @@
             />
           </div>
           <!-- song list -->
-          <div class="songList m-1 p-1 list-decimal cursor-pointer text-base italic underline ">
+          <div class="songList m-1 p-1 relative custom-max-height overflow-scroll list-decimal text-base italic underline ">
             <ul>     
-                <li class="songLi"> 
+                <!-- <li class="songLi pt-2 pb-1"> 
                     <img src="./public/images/music.svg" alt="" class="src invert m-1 ">
                     <div class="info text-sm w-full cursor-pointer">
                       <div class="ml-2"> Song Name</div>
@@ -65,10 +66,10 @@
                         <span class="text-[12px]">play now</span>  
                         <img src="./public/images/play.svg" alt="" class="src invert ml-2 m-1 ">
                     </div>
-                </li>  
+                </li>   -->
             </ul>
           </div>
-          <div class="footer absolute bottom-0 flex text-xs m-2 gap-5 p-1 text-gray-500">
+          <div class="footer bottom-0 flex text-xs m-2 gap-5 p-1 text-gray-500">
             <div class="felx">
               <a href="https://www.spotify.com/ca-en/legal/">
                 <span>Legal</span>
@@ -106,6 +107,7 @@
     <div class="right flex-none w-3/4 rounded relative mt-3  bg-[#121212]">
         <div class="header bg-[#1f1f1f] flex rounded justify-between ">
             <div class="nav flex p-4">
+              <img class="invert hamburger" src="./public/images/hamburger.svg"/>
                 <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#FFFFFF" fill="none">
                     <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
@@ -557,22 +559,28 @@
         <p class="text-sm">Taylor, The Creator</p>
     </div>
         </div>
-
+    </div>    
         <!-- player -->
-        <div class="play bar bg-green-600 player absolute bottom-1 w-3/4 p-2 ml-4 " style="background-color:#1ed760 ;">
-          <div class="songinfo">
-
+        <div class="playbar fixed bottom-0 z-50 flex justify-center  bg-green-600 player rounded h-14 p-1 mr-4" style="background-color:#1ed760; margin-bottom: 10px;">
+          <div class="seekbar absolute bottom-1 mt-0 cursor-pointer" style="width:98%; height: 7px; border: 2px solid rgb(0, 0, 0) !important; border-radius: 6px;">  
+            <div class="circle relative"> </div>
           </div>
-          <div class="songbtn flex justify-center gap-3">
-            <img class="cursor-pointer" src="./public/images/prevsong.svg" alt="previous song">
-            <img class="cursor-pointer" src="./public/images/play.svg" alt="song song">
-            <img class="cursor-pointer" src="./public/images/nextsong.svg" alt="next song">
+          <div class="songinfo text-base">
+            <!--Song track name  -->
+          </div>
+          <div class="songbtn mx-4 flex justify-center m-1 gap-3">
+            <img id="previous" class="cursor-pointer" src="./public/images/prevsong.svg" alt="previous song">
+            <img id="play" class="cursor-pointer" src="./public/images/play.svg" alt="song song">
+            <img id="next" class="cursor-pointer" src="./public/images/nextsong.svg" alt="next song">
+          </div>
+          <div class="songtime text-base" >
+           <!-- Song time/duration -->
           </div>
          </div>
 
 
       </div>
-  </div>
+  <!-- </div> -->
     <script src="script.js"></script>
   </body>
 </html>
